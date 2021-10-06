@@ -57,11 +57,11 @@ public class Sample extends BaseClass {
 //		String pass = readCell("Data", "Datas", 5, 2,"dd-MM-YYYY");
 		fillTextBox(driver.findElement(By.id("pass")), allValues.get(6));
 		
-		System.out.println(getTitle());
-		System.out.println(getCurrentUrl());
-		System.out.println(getAttribute(driver.findElement(By.id("email"))));
-		System.out.println(getAttribute(driver.findElement(By.id("pass"))));
-		logInBtn(driver.findElement(By.name("login")));
+		pageTitle();
+		pageUrl();
+		System.out.println(getAttribute(driver.findElement(By.id("email")), "value"));
+		System.out.println(getAttribute(driver.findElement(By.id("pass")), "value"));
+		btnClick(driver.findElement(By.name("login")));
 		
 	}
 	
